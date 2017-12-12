@@ -14,7 +14,7 @@ RSpec.describe StaticPagesController, type: :controller do
     end
     it "should have the right title" do
       get 'home'
-      response.body.should have_xpath("//title",:text => "\nHome\n| #{@base_title}")
+      response.body.should have_xpath("//title",:text => "\nHome | #{@base_title}")
     end
   end
 
@@ -25,7 +25,7 @@ RSpec.describe StaticPagesController, type: :controller do
     end
     it "should have the right title" do
       get 'help'
-      response.body.should have_xpath("//title",:text => "\nHelp\n| #{@base_title}")
+      response.body.should have_xpath("//title",:text => "\nHelp | #{@base_title}")
     end
   end
 
@@ -36,7 +36,7 @@ RSpec.describe StaticPagesController, type: :controller do
     end
     it "should have the right title" do
       get 'about'
-      response.body.should have_xpath("//title",:text => "\nAbout\n| #{@base_title}")
+      response.body.should have_xpath("//title",:text => "\nAbout | #{@base_title}")
     end
   end
 end
